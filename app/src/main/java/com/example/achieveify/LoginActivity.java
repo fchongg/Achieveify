@@ -13,7 +13,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class LoginActivity extends AppCompatActivity {
-    Button login_button,register;
+    Button login_button,register_button;
     EditText email,password;
 
     @Override
@@ -49,5 +49,7 @@ public class LoginActivity extends AppCompatActivity {
         );
     }
 
-
+    public void RegisterButton() {
+        register_button = (Button) findViewById(R.id.btn_register);
+    }
 }
