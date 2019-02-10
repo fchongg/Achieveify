@@ -9,7 +9,6 @@ import android.content.Intent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 public class LoginActivity extends AppCompatActivity {
@@ -21,6 +20,7 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         LoginButton();
+        RegisterButton();
     }
 
     public void LoginButton(){
@@ -51,5 +51,13 @@ public class LoginActivity extends AppCompatActivity {
 
     public void RegisterButton() {
         register_button = (Button) findViewById(R.id.btn_register);
+        register_button.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        startActivity(new Intent(LoginActivity.this, SignupActivity.class));
+                    }
+                }
+        );
     }
 }

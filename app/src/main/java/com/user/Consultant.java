@@ -33,7 +33,7 @@ public class Consultant {
     private void setName (String name){
         currChild.name = name;
     }
-    
+
 
     protected void setReward(Child child, String reward_name) {
 
