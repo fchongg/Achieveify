@@ -1,6 +1,8 @@
 package com.user;
 
 import java.util.HashMap;
+
+import com.example.achieveify.ChildScreen;
 import com.user.Program;
 
 import java.util.*;
@@ -10,16 +12,21 @@ public class Child {
     String name;
     Integer points;
     Integer currentPoints;
+    int interval;
+    ChildScreen childScreen;
 
     public Child(String name) {
         programs = new HashMap<String, Program>();
+        childScreen = new ChildScreen();
         this.name = name;
         this.currentPoints = 0;
+        interval = 0;
     }
 
     public void setProgram(Program program) {
         if (!programs.containsKey(program.getName())) {
             programs.put(program.getName(), program);
+            childScreen.setInterval(program.getInterval());
         }
     }
 

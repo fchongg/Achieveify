@@ -7,6 +7,7 @@ public class Program {
     String program;
     int dataCounter;
     int numIntervals;
+    int interval;
     int[] todayData;
     Queue<int[]> data = new LinkedList<>();
 
@@ -14,6 +15,7 @@ public class Program {
     public Program(String program, int startHour, int startMinute, int endHour, int endMinute, int interval) {
         this.program = program;
         dataCounter = 0;
+        this.interval = interval;
         findIntervalSize(startHour, startMinute, endHour, endMinute, interval);
     }
 
@@ -34,5 +36,9 @@ public class Program {
     private void findIntervalSize(int startHour, int startMin, int endHour, int endMin, int interval){
         int totalTimeMin = (endHour-startHour)*60 - startMin + endMin;
         numIntervals = totalTimeMin/interval;
+    }
+
+    public int getInterval() {
+        return interval;
     }
 }
