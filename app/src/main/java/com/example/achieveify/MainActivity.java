@@ -1,4 +1,4 @@
-git remote add origin git@github.com:fchongg/Achieveify.gitpackage com.example.achieveify;
+package com.example.achieveify;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
